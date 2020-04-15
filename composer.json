@@ -1,0 +1,54 @@
+{
+    "name": "bytsigan/export-excel",
+    "description": "",
+    "keywords": [
+        "bytsigan",
+        "export-excel"
+    ],
+    "homepage": "https://github.com/bytsigan/export-excel",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "bytsigan",
+            "email": "bytsigan@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bytsigan\\ExportExcel\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bytsigan\\ExportExcel\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bytsigan\\ExportExcel\\ExportExcelServiceProvider"
+            ],
+            "aliases": {
+                "ExportExcel": "Bytsigan\\ExportExcel\\ExportExcelFacade"
+            }
+        }
+    }
+}
