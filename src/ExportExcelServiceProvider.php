@@ -56,6 +56,5 @@ class ExportExcelServiceProvider extends ServiceProvider
         $this->app->singleton('export-excel', function () {
             return new ExportExcel;
         });
-        
     }
 }
